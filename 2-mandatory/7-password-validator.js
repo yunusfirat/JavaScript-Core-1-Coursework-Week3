@@ -23,6 +23,8 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
+  let regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&amp;\*])(?=.{6,})")
+  return passwords.map(element =>  regex.test(element))
 
 }
 
@@ -53,5 +55,5 @@ test(
 test(
   "validatePasswords function works - case 2",
   validatePasswords(passwords2),
-  [true, true, false, false, false]
+  [true, true, false, false, true]
 );

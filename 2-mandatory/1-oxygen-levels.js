@@ -11,8 +11,10 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function safeLevels() {}
-
+function safeLevels(oxygen) {
+  oxygen = oxygen.map(a=> parseFloat(a)).find(element => element > 19.5 && element < 23.5);
+  return `${oxygen}%`
+}
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const oxygenLevels1 = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"];

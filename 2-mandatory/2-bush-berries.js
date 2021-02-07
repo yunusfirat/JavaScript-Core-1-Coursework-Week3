@@ -21,7 +21,9 @@
   Let's first look at an example that will teach you how to use these methods.
 */
 
-function bushChecker() {}
+function bushChecker(bush) {
+  return bush.every( item => item === "pink") ? "Bush is safe to eat from" : "Toxic! Leave bush alone!"
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -50,7 +52,7 @@ test(
 );
 
 test(
-  "bushChecker funtion works - case 1",
+  "bushChecker funtion works - case 2",
   bushChecker(bushBerryColours2),
   "Bush is safe to eat from"
 );
